@@ -4,6 +4,10 @@
   font-style: normal;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
 .header {
   background: #048a99;
   color: #ffffff;
@@ -13,7 +17,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   left: 0;
   top: 0;
   z-index: 100;
@@ -27,5 +31,40 @@
 .header__heading {
   font-family: Syne Mono;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.navbar {
+  background: #048a99;
+  color: #ffffff;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* align-content: center; */
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.navbar__button {
+  /*Style me! Change my border, set a border radius or what you want to try out. :) */
+  border-radius: 0px;
+  border: none;
+  background-color: #048a99;
+  width: 33%;
+}
+
+.navbar__button:hover {
+  background-color: #07bbcf;
+}
+
+.navbar__item {
+  fill: white;
+}
+
+.navbar__item:hover {
+  /* fill: grey; */
 }
