@@ -1,0 +1,31 @@
+.syne-mono-regular {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  background: #048a99;
+  color: #ffffff;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  padding: 10px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.header__text {
+  color: #ff4a11;
+}
+
+.header__heading {
+  font-family: Syne Mono;
+  font-weight: 500;
+  font-size: 2rem;
+}
