@@ -8,6 +8,7 @@
     />
     <title>squizzed</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/index.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +18,13 @@
     />
   </head>
 
-  <body>
+  <body data-js="body">
     <header class="header">
       <h1 class="header__heading">squizzed</h1>
       <!-- <span class="header__text">try to position things now</span> -->
     </header>
 
-    <main>
+    <main data-js="main">
       <section class="card" id="top">
         <button class="card__bookmark">
           <svg
@@ -40,9 +41,9 @@
           </svg>
         </button>
         <p class="question__text">What property flips the axis in flexbox?</p>
-        <p hidden class="solution">Answer: flex-direction.</p>
+        <p class="solution" data-js = "solution">flex-direction</p>
 
-        <button class="show_answer">Show Answer</button>
+        <button class="show_answer" data-js="toggle_answer_button">Show Answer</button>
 
         <ul class = "tags">
           <li>#html</li>
@@ -68,13 +69,14 @@
           </svg>
         </button>
         <p class="question__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <p hidden class="solution">Answer: nescio.</p>
+        <p class="solution" data-js = "solution">nescio</p>
 
-        <button class="show_answer">Show Answer</button>
+        <button class="show_answer" data-js="toggle_answer_button">Show Answer</button>
 
         <ul class = "tags">
           <li>#latin</li>
       </section>
+
     </main>
 
     <footer class="navbar">
