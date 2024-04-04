@@ -50,7 +50,7 @@ main {
   font-size: 1.2rem;
 }
 
-.card__bookmark {
+.bookmark_button {
   border: none;
   font-size: 2em;
   padding: none;
@@ -60,15 +60,19 @@ main {
   background-color: transparent;
 }
 
-.bookmark__item {
+.bookmark_item {
   fill: #048a99;
   opacity: 40%;
   transform: scale(1.15);
 }
 
-.bookmark__item:hover {
+.bookmark_item:hover {
   cursor: pointer;
-  /* opacity: 100%; */
+  transform: scale(1.3);
+}
+
+.card.bookmarked .bookmark_item {
+  opacity: 100%;
   transform: scale(1.3);
 }
 

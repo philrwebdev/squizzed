@@ -14,5 +14,8 @@ mainElement.addEventListener("click", (event) => {
     } else {
       event.target.textContent = "Show Answer";
     }
+  } else if (eventTargetAttr == "bookmark_path") {
+    const targetCard = event.target.closest("[data-js = card]");
+    targetCard.classList.toggle("bookmarked");
   }
 });
