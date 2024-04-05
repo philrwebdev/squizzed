@@ -21,15 +21,68 @@
   border-bottom-left-radius: 1em;
 }
 
-.header__text {
-  color: #ff4a11;
-}
-
 .header__heading {
   font-family: Syne Mono;
   font-weight: 500;
   font-size: 2.5rem;
 }
+
+/* .h1 {
+  display: inline-block;
+} */
+
+.blur {
+  font-family: Syne Mono;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 0.2rem;
+  /* transition: color 800ms, text-shadow 800ms; */
+}
+
+@-webkit-keyframes aniblur {
+  from {
+    text-shadow: 0rem 0rem 0.7rem rgb(255, 255, 255, 1);
+    color: transparent;
+  }
+  to {
+    text-shadow: 0;
+    color: white;
+  }
+}
+
+.h1container:hover {
+  cursor: default;
+  .h1 span:nth-of-type(1) {
+    animation: aniblur 5000ms 1 alternate;
+  }
+  .h1 span:nth-of-type(2) {
+    animation: aniblur 5000ms 0.15s 1 alternate;
+  }
+  .h1 span:nth-of-type(3) {
+    animation: aniblur 5000ms 0.25s 1 alternate;
+  }
+  .h1 span:nth-of-type(4) {
+    animation: aniblur 5000ms 0.4s 1 alternate;
+  }
+  .h1 span:nth-of-type(5) {
+    animation: aniblur 5000ms 0.5s 1 alternate;
+  }
+  .h1 span:nth-of-type(6) {
+    animation: aniblur 5000ms 0.65s 1 alternate;
+  }
+  .h1 span:nth-of-type(7) {
+    animation: aniblur 5000ms 0.75s 1 alternate;
+  }
+  .h1 span:nth-of-type(8) {
+    animation: aniblur 5000ms 0.9s 1 alternate;
+  }
+}
+
+/* .blur:hover {
+  text-shadow: 0rem 0rem 0.7rem rgb(255, 255, 255, 1);
+  color: transparent;
+  cursor: default;
+} */
 
 main {
   /* margin: 150px 0px 150px 0px; */
