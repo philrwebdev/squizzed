@@ -1,0 +1,16 @@
+.card:not(.bookmarked) {
+  display: none;
+}
+
+/* Animating on display, see: https://developer.chrome.com/blog/entry-exit-animations */
+
+/* .card:not(.bookmarked) {
+  animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+} */
