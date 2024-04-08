@@ -1,5 +1,6 @@
 const bodyElement = document.querySelector("[data-js=body]");
 const mainElement = document.querySelector("[data-js=main]");
+const cardsElement = document.querySelector("[data-js=cards]");
 
 window.onload = function () {
   // Check if localStorage is available (IE8+) and make sure that the visited flag is not already set.
@@ -15,18 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsIndexIn = JSON.parse(sessionStorage.getItem("cardsOutHTML"));
 
   if (cardsIndexIn !== null) {
-    mainElement.innerHTML = "";
-    mainElement.innerHTML += cardsIndexIn;
+    cardsElement.innerHTML = "";
+    cardsElement.innerHTML += cardsIndexIn;
   }
-
-  console.log(window.location.pathname);
-
 });
 
 window.onbeforeunload = () => {
-  const cardsIndexOut = mainElement.querySelectorAll(
-    ".card:not(.default)"
-  );
+  const cardsIndexOut = cardsElement.querySelectorAll("[data-js=card]");
 
   let cardsIndexOutHTML = "";
 

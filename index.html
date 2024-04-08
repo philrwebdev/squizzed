@@ -21,69 +21,84 @@
 
   <body data-js="body">
     <header class="header">
-        <span class="h1container">
-            <h1 class="h1">
-                <span class="blur">s</span><span class="blur">q</span><span class="blur">u</span><span class="blur">i</span><span class="blur">z</span><span class="blur">z</span><span class="blur">e</span><span class="blur">d</span>
-            </h1>
-        </span>
+      <span class="h1container">
+        <h1 class="h1">
+          <span class="blur">s</span><span class="blur">q</span
+          ><span class="blur">u</span><span class="blur">i</span
+          ><span class="blur">z</span><span class="blur">z</span
+          ><span class="blur">e</span><span class="blur">d</span>
+        </h1>
+      </span>
       <!-- <p class="header__heading">squizzed</p> -->
     </header>
 
     <main data-js="main">
-      <section class="card" data-js="card">
-        <button class="bookmark_button" data-js="bookmark_button">
-          <svg
-            class="bookmark_item"
-            data-js="bookmark_item"
-            xmlns="xmlns"
-            ="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-          >
-            <path class="bookmark_path" data-js="bookmark_path"
-              d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"
-            />
-          </svg>
-        </button>
-        <p class="question__text">What property flips the axis in flexbox?</p>
-        <p class="solution" data-js = "solution">flex-direction</p>
+      <section class="pre_cards" data-js="pre_cards"></section>
+      <section class="cards" data-js="cards">
+        <section class="card" data-js="card">
+          <button class="bookmark_button" data-js="bookmark_button">
+            <svg
+              class="bookmark_item"
+              data-js="bookmark_item"
+              xmlns="xmlns"
+              ="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                class="bookmark_path"
+                data-js="bookmark_path"
+                d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"
+              />
+            </svg>
+          </button>
+          <p class="question__text">What property flips the axis in flexbox?</p>
+          <p class="solution" data-js="solution">flex-direction</p>
 
-        <button class="show_answer" data-js="toggle_answer_button">Show Answer</button>
+          <button class="show_answer" data-js="toggle_answer_button">
+            Show Answer
+          </button>
 
-        <ul class = "tags">
-          <li>#html</li>
-          <li>#flexbox</li>
-          <li>#css</li>
-        </ul>
+          <ul class="tags">
+            <li>#html</li>
+            <li>#flexbox</li>
+            <li>#css</li>
+          </ul>
+        </section>
 
+        <section class="card" data-js="card">
+          <button class="bookmark_button" data-js="bookmark_button">
+            <svg
+              class="bookmark_item"
+              data-js="bookmark_item"
+              xmlns="xmlns"
+              ="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                class="bookmark_path"
+                data-js="bookmark_path"
+                d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"
+              />
+            </svg>
+          </button>
+          <p class="question__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+          <p class="solution" data-js="solution">nescio</p>
+
+          <button class="show_answer" data-js="toggle_answer_button">
+            Show Answer
+          </button>
+
+          <ul class="tags">
+            <li>#latin</li>
+          </ul>
+        </section>
       </section>
-
-      <section class="card" data-js="card">
-        <button class="bookmark_button" data-js="bookmark_button">
-          <svg
-            class="bookmark_item"
-            data-js="bookmark_item"
-            xmlns="xmlns"
-            ="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-          >
-            <path class="bookmark_path" data-js="bookmark_path"
-              d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"
-            />
-          </svg>
-        </button>
-        <p class="question__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <p class="solution" data-js = "solution">nescio</p>
-
-        <button class="show_answer" data-js="toggle_answer_button">Show Answer</button>
-
-        <ul class = "tags">
-          <li>#latin</li>
-      </section>
-
     </main>
 
     <footer class="navbar">

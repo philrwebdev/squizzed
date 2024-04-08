@@ -1,3 +1,5 @@
+const preCardsElement = document.querySelector("[data-js=pre_cards]");
+
 // window.onload = function() {
 //   // Check if localStorage is available (IE8+) and make sure that the visited flag is not already set.
 //   if(typeof window.sessionStorage !== "undefined" && !sessionStorage.getItem('visited')) {
@@ -5,10 +7,29 @@
 //   }
 // }
 
-const nBookmarked = mainElement.querySelectorAll("[data-js=card]");
-console.log("N bookmarked = " + JSON.stringify(nBookmarked));
+document.addEventListener("DOMContentLoaded", () => {
+  const nBookmarked = cardsElement.querySelectorAll(".bookmarked").length;
+  if (nBookmarked < 1) {
+    preCardsElement.innerHTML =
+      '<section class="card bookmarked default" data-js="card default"><p class="question__text">Nothing currently bookmarked!</p></section>';
+  }
+});
 
-if (nBookmarked < 1) {
-  mainElement.innerHTML =
-    '<section class="card bookmarked" data-js="card"><p class="question__text">Nothing bookmarked yet!</p><p class="solution" data-js = "solution">flex-direction</p></section>';
+function callback(mutations) {
+  for (let mutation of mutations) {
+    if (mutation.attributeName == "class") {
+      const nBookmarked = cardsElement.querySelectorAll(".bookmarked").length;
+      if (nBookmarked < 1) {
+        preCardsElement.innerHTML =
+          '<section class="card bookmarked default" data-js="card default"><p class="question__text">Nothing currently bookmarked!</p></section>';
+      }
+    }
+  }
 }
+
+const observer = new MutationObserver(callback);
+
+observer.observe(cardsElement, {
+  subtree: true,
+  attributes: true,
+});

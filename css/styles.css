@@ -103,6 +103,14 @@ main {
   font-size: 1.2rem;
 }
 
+.card.default {
+  height: 30vh;
+  position: absolute;
+  /* flex-wrap: wrap; */
+  /* justify-items: center; */
+  /* text-justify: center; */
+}
+
 .bookmark_button {
   border: none;
   font-size: 2em;
@@ -135,6 +143,7 @@ main {
 
 .question__text {
   text-align: center;
+  justify-self: center;
 }
 
 .solution {
