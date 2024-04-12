@@ -111,9 +111,42 @@ main {
   height: 30vh;
   position: relative;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
-  /* justify-items: center; */
-  /* text-justify: center; */
+}
+
+.card__hint_sun {
+  border: none;
+  font-size: 2em;
+  padding: none;
+  position: absolute;
+  left: 1.65%;
+  top: 0.5%;
+  /* fill: #048a99; */
+  fill: hsl(186, 48%, 70%);
+  /* opacity: 40%; */
+  transform: scale(0.8);
+  z-index: -1;
+}
+
+.card__hint {
+  border: none;
+  font-size: 2em;
+  padding-left: none;
+  /* padding: none; */
+  position: absolute;
+  left: 3%;
+  top: -2%;
+  fill: hsl(186, 48%, 70%);
+  /* opacity: 50%; */
+  transform: scale(1.6);
+  transition: padding 1000ms, transform 1000ms;
+}
+
+.card__hint:hover,
+.card__hint:hover + .card__hint_sun {
+  cursor: pointer;
+  /* transform: scale(1.5); */
+  /* opacity: 1; */
+  fill: hsl(186, 95%, 31%);
 }
 
 .bookmark_button {
@@ -130,6 +163,7 @@ main {
   fill: #048a99;
   opacity: 40%;
   transform: scale(1.15);
+  /* pointer-events: none; */
 }
 
 .bookmark_item:hover {
@@ -172,6 +206,12 @@ main {
   text-shadow: none;
 }
 
+.letterSpan.revealed {
+  transition-delay: 0ms;
+  color: black;
+  text-shadow: none;
+}
+
 .show_answer {
   border-radius: 5px;
   border: none;
@@ -180,7 +220,7 @@ main {
   border-style: solid; */
   margin: 1rem;
   padding: 0.5rem;
-  background-color: #048a99;
+  background-color: hsl(186, 48%, 70%);
   width: auto;
   font-size: 1rem;
   color: white;
@@ -189,7 +229,7 @@ main {
 .show_answer:hover {
   cursor: pointer;
   transform: scale(1.1);
-  background-color: #07bbcf;
+  background-color: hsl(186, 95%, 31%);
 }
 
 .tags {
@@ -257,7 +297,7 @@ main {
 }
 
 .current_page > .navbar__item {
-  fill:rgb(2, 67, 67);
+  fill: rgb(2, 67, 67);
 }
 
 .current_page[aria-label]:hover::after {
