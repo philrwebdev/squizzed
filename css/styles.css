@@ -248,6 +248,25 @@ main {
   color: white;
 }
 
+.add_button {
+  border: none;
+  margin: none;
+  font-size: 3em;
+  padding: none;
+  position: fixed;
+  right: 5vw;
+  bottom: 15vh;
+  fill: hsl(186, 48%, 70%);
+  transform: scale(2.3);
+  transition: transform 200ms;
+}
+
+.add_button:hover {
+  cursor: pointer;
+  transform: scale(2.5) rotate(90deg);
+  fill: hsl(186, 95%, 31%);
+}
+
 .navbar {
   background: #048a99;
   color: #ffffff;
