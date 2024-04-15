@@ -122,12 +122,11 @@ main {
   top: 0.5%;
   /* fill: #048a99; */
   fill: hsl(186, 48%, 70%);
-  /* opacity: 40%; */
   transform: scale(0.8);
   z-index: -1;
 }
 
-.card__hint {
+.card__hint_cloud {
   border: none;
   font-size: 2em;
   padding-left: none;
@@ -136,13 +135,12 @@ main {
   left: 3%;
   top: -2%;
   fill: hsl(186, 48%, 70%);
-  /* opacity: 50%; */
   transform: scale(1.6);
   transition: padding 1000ms, transform 1000ms;
 }
 
-.card__hint:hover,
-.card__hint:hover + .card__hint_sun {
+.card__hint_cloud:hover,
+.card__hint_cloud:hover + .card__hint_sun {
   cursor: pointer;
   /* transform: scale(1.5); */
   /* opacity: 1; */
@@ -159,19 +157,19 @@ main {
   background-color: transparent;
 }
 
-.bookmark_item {
+.bookmark_button__icon {
   fill: #048a99;
   opacity: 40%;
   transform: scale(1.15);
   /* pointer-events: none; */
 }
 
-.bookmark_item:hover {
+.bookmark_button__icon:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
 
-.card.bookmarked .bookmark_item {
+.card.bookmarked .bookmark_button__icon {
   opacity: 100%;
   transform: scale(1.3);
 }

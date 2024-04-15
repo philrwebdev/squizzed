@@ -1,7 +1,6 @@
 const bodyElement = document.querySelector("[data-js=body]");
 const mainElement = document.querySelector("[data-js=main]");
 const cardsElement = document.querySelector("[data-js=cards]");
-const hintElement = document.querySelector("[data-js=card__hint]");
 
 function lettersToSpans(element) {
   const split = element.innerHTML.split("");
@@ -27,11 +26,11 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const cardsIndexIn = JSON.parse(sessionStorage.getItem("cardsOutHTML"));
+  const cardsIn = JSON.parse(sessionStorage.getItem("cardsOutHTML"));
 
-  if (cardsIndexIn !== null) {
+  if (cardsIn !== null) {
     cardsElement.innerHTML = "";
-    cardsElement.innerHTML += cardsIndexIn;
+    cardsElement.innerHTML += cardsIn;
   }
 });
 
@@ -49,16 +48,16 @@ window.onload = (event) => {
 };
 
 window.onbeforeunload = () => {
-  const cardsIndexOut = cardsElement.querySelectorAll("[data-js=card]");
+  const cardsOut = cardsElement.querySelectorAll("[data-js=card]");
 
-  let cardsIndexOutHTML = "";
+  let cardsOutHTML = "";
 
-  for (i = 0; i < cardsIndexOut.length; i++) {
-    cardsIndexOutHTML += cardsIndexOut[i].outerHTML;
+  for (i = 0; i < cardsOut.length; i++) {
+    cardsOutHTML += cardsOut[i].outerHTML;
   }
 
   // sessionStorage.removeItem("cardsOutHTML");
-  sessionStorage.setItem("cardsOutHTML", JSON.stringify(cardsIndexOutHTML));
+  sessionStorage.setItem("cardsOutHTML", JSON.stringify(cardsOutHTML));
 };
 
 cardsElement.addEventListener("click", (event) => {
@@ -90,7 +89,7 @@ cardsElement.addEventListener("click", (event) => {
     }
 
     let cardHintCloud = event.target.parentNode.querySelector(
-      "[data-js = card__hint]"
+      "[data-js = card__hint_cloud]"
     );
 
     if (targetAnswer.classList.contains("visible")) {
@@ -104,12 +103,12 @@ cardsElement.addEventListener("click", (event) => {
       cardHintCloud.style.paddingTop = "0";
       cardHintCloud.style.transform = "scale(1.6)";
     }
-  } else if (eventTargetAttr == "bookmark_path") {
+  } else if (eventTargetAttr == "bookmark_button__svg_path") {
     const targetCard = event.target.closest("[data-js = card]");
     targetCard.classList.toggle("bookmarked");
-  } else if (eventTargetAttr == "card__hint_path") {
+  } else if (eventTargetAttr == "card__hint_cloud_path") {
     event.target.parentNode.parentNode.click();
-  } else if (eventTargetAttr == "card__hint") {
+  } else if (eventTargetAttr == "card__hint_cloud") {
     const targetAnswer = event.target.parentNode.querySelector(
       "[data-js = solution]"
     );
